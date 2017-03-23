@@ -1,0 +1,21 @@
+<% if flash[:success] %>
+    <%= flash[:success] %> <br>
+<% end %>
+
+<% @disks_array.each do |disk| %>
+    ---------------------------------------- <br>
+    Access type: <%= @access_type %> <br>
+    Disk name: <%= disk.name.capitalize %> <br>
+    <% disk.contents.each do |file| %>
+        File name: <%= file.name %> <br>
+    <% end %>
+    ---------------------------------------- <br>
+<% end %>
+Perform some actions: <br>
+<a href="/action?action_e=R">Read File</a><br>
+<a href="/action?action_e=E">Execute File</a><br>
+<a href="/action?action_e=W">Write File</a><br>
+<a href="/action?action_e=A">Add to file</a><br>
+<a href="/action?action_e=C">Create File</a><br>
+<a href="/action?action_e=O">Own file</a><br>
+

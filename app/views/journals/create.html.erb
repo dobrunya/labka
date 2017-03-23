@@ -1,0 +1,11 @@
+<%= flash[:success] %>
+<form action="/log_user" method="post">
+    Username: <input type="text" name="username"><br>
+    Password: <input type="password" name="password"><br>
+    Q1: <input type="text" name="question[]"><br>
+    A1: <input type="text" name="answer[]"><br>
+    Q2: <input type="text" name="question[]"><br>
+    A2: <input type="text" name="answer[]"><br>
+    Your secret function: `tan(5*x)` <br>
+    <input type="submit" value="Submit">
+</form>

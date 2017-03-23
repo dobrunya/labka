@@ -1,0 +1,13 @@
+<% @journal.each do |record| %>
+    ---------------------------------<br>
+    Username: <%= record.username %> <br>
+    Password: <%= record.password %> <br>
+    Questions: <br>
+    <% record.questions.each do |question| %>
+        Q: <%= question.first %> <br>
+        A: <%= question.second %> <br>
+    <% end %>
+    <a href="/save?id=<%= record.id %>">Approve</a> <br>
+    <a href="/delete_record?id=<%= record.id %>">Remove</a> <br>
+    ---------------------------------<br>
+<% end %>

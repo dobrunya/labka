@@ -1,0 +1,8 @@
+<% @journal.each do |record| %>
+    ---------------------------------<br>
+    Username: <%= record.user.username %> <br>
+    Danger Level: <%= record.danger_level %> <br>
+    Comment: <%= record.comment %> <br>
+    Date: <%= record.create_at %>
+    ---------------------------------<br>
+<% end %>
